@@ -1,0 +1,5 @@
+Brand,BrandCode,Country,CountryCode,ClassGold,ClassSilver,ClassBronze
+Brand1,BB1,Australia,AUS,Yes,No,No
+Brand2,BB2,Brazil,BRA,No,Yes,No
+Brand3,BB3,New Zealand,NZL,No,No,Yes
+Brand4,BB4,Vietnam,VNM,No,Yes,Yes
