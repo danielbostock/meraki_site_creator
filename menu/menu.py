@@ -4,6 +4,7 @@ from menu.text import BRAND, COUNTRY, CREATE_SITE_TEXT, TOP_SELECT_TEXT, SITE_NA
 from meraki_importer.importer import importer
 import site_creator.brander, site_creator.namer, site_creator.network
 from menu.clear import clear
+from device_namer import device
 
 # Temp test text
 temp_text1 = 'You have made a selection thats not ready yet'
@@ -62,6 +63,8 @@ def text_menu():
                         if confirm == 1:
                             create_site = site_creator.network.orgNetwork(site_name,serials)
                             create_site.create()
+                            device_name = device.deviceNamer(site_name,serials)
+                            device_name.get()
                             complete = True
                             clear()
                             print(COMPLETE)
@@ -86,6 +89,8 @@ def text_menu():
                         if confirm == 1:
                             create_site = site_creator.network.orgNetwork(site_name, serials)
                             create_site.create()
+                            device_name = device.deviceNamer(site_name,serials)
+                            device_name.get()
                             complete = True
                             clear()
                             print(COMPLETE)
@@ -110,6 +115,8 @@ def text_menu():
                         if confirm == 1:
                             create_site = site_creator.network.orgNetwork(site_name, serials)
                             create_site.create()
+                            device_name = device.deviceNamer(site_name,serials)
+                            device_name.get()
                             clear()
                             print(COMPLETE)
                             complete = True
