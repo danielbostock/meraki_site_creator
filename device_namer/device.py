@@ -33,19 +33,18 @@ class deviceNamer:
             for serial in (self.serials):
                 get_device = self.dashboard.devices.getDevice(serial=(serial))
                 get_type = get_device['model']
-                if get_type in ('MR36'):
+                if get_type.startswith("MR"):
                     ap.append(serial)
                     for number, serial in enumerate(ap, start=1):
                         name = (self.site + '-AP')
                         self.update(name,serial,number)
-                elif get_type in ('MS120-24P'):
+                elif get_type.startswith("MS"):
                     sw.append(serial)
                     for number, serial in enumerate(sw, start=1):
                         name = (self.site + '-SW')
                         self.update(name,serial,number)
-                elif get_type in ('MX67C-WW'):
+                elif get_type.startswith("MX"):
                     mx.append(serial)
-                    print(mx)
                     for number, serial in enumerate(mx, start=1):
                         name = (self.site + '-MX')
                         self.update(name,serial,number)
